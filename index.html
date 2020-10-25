@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Entry</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="./main.js"></script>
+    <style>
+        .MathJax {
+            font-size: 1em !important;
+        }
+
+        .mjx-chtml.MathJax_CHTML {
+            font-size: 1em !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-2">
+                <div class="row">
+                    <div class="col-12 mt-2">
+                        <button class="btn btn-warning btn-block" onclick="toggleSubject('phy-col')">Physics</button>
+                        <button class="btn btn-warning btn-block" onclick="toggleSubject('chem-col')">Chemistry</button>
+                        <button class="btn btn-warning btn-block" onclick="toggleSubject('math-col')">Math</button>
+                        <button class="btn btn-warning btn-block" onclick="toggleSubject('bio-col')">Biology</button>
+                    </div>
+                    <div class="col-12 mt-2">
+                        <ul class="list-group d-none" id="phy-col">
+                            <li class="list-group-item bg-success text-light">Physics</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120001');">0120001</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120002');">0120002</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120003');">0120003</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120004');">0120004</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120005');">0120005</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120006');">0120006</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120007');">0120007</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120008');">0120008</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120009');">0120009</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120010');">0120010</li>
+                        </ul>
+                        <ul class="list-group d-none" id="chem-col">
+                            <li class="list-group-item bg-success text-light">Chemistry</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120101');">0120101</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120102');">0120102</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120103');">0120103</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120104');">0120104</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120105');">0120105</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120106');">0120106</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120107');">0120107</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120108');">0120108</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120109');">0120109</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120110');">0120110</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120111');">0120111</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120112');">0120112</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120113');">0120113</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120114');">0120114</li>
+                        </ul>
+                        <ul class="list-group d-none" id="math-col">
+                            <li class="list-group-item bg-success text-light">Math</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120201');">0120201</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120202');">0120202</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120203');">0120203</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120204');">0120204</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120205');">0120205</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120206');">0120206</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120207');">0120207</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120208');">0120208</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120209');">0120209</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120210');">0120210</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120211');">0120211</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120212');">0120212</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120213');">0120213</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120214');">0120214</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120215');">0120215</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120216');">0120216</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120217');">0120217</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120218');">0120218</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120219');">0120219</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120220');">0120220</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120221');">0120221</li>
+                        </ul>
+                        <ul class="list-group d-none" id="bio-col">
+                            <li class="list-group-item bg-success text-light">Biology</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120301');">0120301</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120302');">0120302</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120303');">0120303</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120304');">0120304</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120305');">0120305</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120306');">0120306</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120307');">0120307</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120308');">0120308</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120309');">0120309</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120310');">0120310</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120311');">0120311</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120312');">0120312</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120313');">0120313</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120314');">0120314</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120315');">0120315</li>
+                            <li class="list-group-item py-1" onclick="getJSON('0120316');">0120316</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-10">
+                <div class="row my-2">
+                    <div class="col-12 d-none justify-content-around d-md-none">
+                        <button class="btn btn-primary" onclick="preQuestion();"><span>1</span><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path fill="white" d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg></button>
+                        <button class="btn btn-primary" onclick="toggleGrid(this)">Show Grid</button>
+                        <button class="btn btn-primary" onclick="nxtQuestion();"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path fill="white" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg><span id="totalQCount"></span></button>
+                    </div>
+                    <div class="col-12 d-none d-md-block" id="btn-grid"></div>
+                </div>
+                <div class="row">
+                    <div class="col" id="benContainer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="container-fluid mb-3 d-flex flex-column flex-lg-row justify-content-center ">
+        <select class="btn btn-warning mr-2 mb-1" onchange="loadJSON(this)">
+            <option value="">Physics</option>
+            <option value="0110001">1. Physical World</option>
+            <option value="0110002">2. Units and Measurements</option>
+            <option value="0110003">3. Motion in Straight Line</option>
+            <option value="0110004">4. Motion in Plane</option>
+            <option value="0110005">5. Motion Laws</option>
+            <option value="0110006">6. Work,Energy,Power</option>
+            <option value="0110007">7. System of Particles and Rotational Motion</option>
+            <option value="0110008">8. Gravitation</option>
+            <option value="0110009">9. Mechanical Properties of Solids</option>
+            <option value="0110010">10. Mechanical Properties of Fluids</option>
+            <option value="0110011">11. Thermal Properties of Matter</option>
+            <option value="0110012">12. Thermodynamics</option>
+            <option value="0110013">13. Kinetic Theory</option>
+            <option value="0110014">14. Oscillations</option>
+            <option value="0110015">15. Waves</option>
+
+            <option value="0120001">1. Electric Charges and Fields</option>
+            <option value="0120002">2. Electrostatic Potential and Capacitance</option>
+            <option value="0120003">3. Current Electricity</option>
+            <option value="0120004">4. Moving Charges and Magnetism</option>
+            <option value="0120005">5. Magnetism and Matter</option>
+            <option value="0120006">6. Electromagnetic Induction</option>
+            <option value="0120007">7. Alternating Current</option>
+            <option value="0120008">8. Electromagnetic Waves</option>
+            <option value="0120009">9. Ray Optics and Optical Instruments</option>
+            <option value="0120010">10. Wave Optics</option>
+            <option value="0120011">11. Dual Nature of Radiation and Matter</option>
+            <option value="0120012">12. Atoms</option>
+            <option value="0120013">13. Nuclei</option>
+            <option value="0120014">14. Semiconductor Electronics</option>
+            <option value="0120015">15. Communication Systems</option>
+        </select>
+        <select class="btn btn-warning mr-2 mb-1" onchange="loadJSON(this)">
+            <option value="">Chemistry</option>
+            <option value="0110101">1. Basic Concepts of Chemistry</option>
+            <option value="0110102">2. Structure of Atom</option>
+            <option value="0110103">3. Classification of Elements & Periodicity in Properties</option>
+            <option value="0110104">4. Chemical Bonding and Molecular Structure</option>
+            <option value="0110105">5. States of Matter: Gases and Liquids</option>
+            <option value="0110106">6. Thermodynamics</option>
+            <option value="0110107">7. Equilibrium</option>
+            <option value="0110108">8. Redox Reactions</option>
+            <option value="0110109">9. Hydrogen</option>
+            <option value="0110110">10. s-Block Elements</option>
+            <option value="0110111">11. p-Block Elements</option>
+            <option value="0110112">12. Organic Chemistry: Basic Principles & Techniques</option>
+            <option value="0110113">13. Hydrocarbons</option>
+            <option value="0110114">14. Environmental Chemistry</option>
+
+            <option value="0120101">1. Solid State</option>
+            <option value="0120102">2. Solutions</option>
+            <option value="0120103">3. Electrochemistry</option>
+            <option value="0120104">4. Chemical Kinetics</option>
+            <option value="0120105">5. Surface Chemistry</option>
+            <option value="0120106">6. Elements Isolation</option>
+            <option value="0120107">7. p-Block Elements</option>
+            <option value="0120108">8. d- and f-Block Elements</option>
+            <option value="0120109">9. Coordination Compounds</option>
+            <option value="0120110">10. Haloalkanes and Haloarenes</option>
+            <option value="0120111">11. Alcohols, Phenols and Ethers</option>
+            <option value="0120112">12. Aldehydes, Ketones and Carboxylic Acids</option>
+            <option value="0120113">13. Organic Compounds containing Nitrogen</option>
+            <option value="0120114">14. Biomolecules</option>
+            <option value="0120115">15. Polymers</option>
+            <option value="0120116">16. Chemistry in Everyday Life</option>
+        </select>
+        <select class="btn btn-warning mr-2 mb-1" onchange="loadJSON(this)">
+            <option value="">Math</option>
+            <option value="0110201">1. Sets</option>
+            <option value="0110202">2. Relations & Functions</option>
+            <option value="0110203">3. Trigonometric Functions</option>
+            <option value="0110204">4. Principle of Mathematical Induction</option>
+            <option value="0110205">5. Complex Numbers and Quadratic Equations</option>
+            <option value="0110206">6. Linear Inequalities</option>
+            <option value="0110207">7. Permutations and Combinations</option>
+            <option value="0110208">8. Binomial Theorem</option>
+            <option value="0110209">9. Sequence and Series</option>
+            <option value="0110210">10. Straight Lines</option>
+            <option value="0110211">11. Conic Sections</option>
+            <option value="0110212">12. Introduction to Three-dimensional Geometry</option>
+            <option value="0110213">13. Limits and Derivatives</option>
+            <option value="0110214">14. Mathematical Reasoning</option>
+            <option value="0110215">15. Statistics</option>
+            <option value="0110216">16. Probability</option>
+
+            <option value="0120201">1. Relations and Functions</option>
+            <option value="0120202">2. Inverse Trigonometric Functions</option>
+            <option value="0120203">3. Matrices</option>
+            <option value="0120204">4. Determinants</option>
+            <option value="0120205">5. Continuity and Differentiability</option>
+            <option value="0120206">6. Applications of Derivatives</option>
+            <option value="0120207">7. Integrals</option>
+            <option value="0120208">8. Applications of the Integrals</option>
+            <option value="0120209">9. Differential Equations</option>
+            <option value="0120210">10. Vectors</option>
+            <option value="0120211">11. Three - dimensional Geometry</option>
+            <option value="0120212">12. Linear Programming</option>
+            <option value="0120213">13. Probability</option>
+        </select>
+        <select class="btn btn-warning mr-2 mb-1" onchange="loadJSON(this)">
+            <option value="">Biology</option>
+            <option value="0110301">1. The Living World</option>
+            <option value="0110302">2. Biological Classification</option>
+            <option value="0110303">3. Plant Kingdom</option>
+            <option value="0110304">4. Animal Kingdom</option>
+            <option value="0110305">5. Morphology of Flowering Plants</option>
+            <option value="0110306">6. Anatomy of Flowering Plants</option>
+            <option value="0110307">7. Structural Organisation in Animals</option>
+            <option value="0110308">8. Cell-The Unit of Life</option>
+            <option value="0110309">9. Biomolecules</option>
+            <option value="0110310">10. Cell Cycle and Cell Division</option>
+            <option value="0110311">11. Transport in Plants</option>
+            <option value="0110312">12. Mineral Nutrition</option>
+            <option value="0110313">13. Photosynthesis in Higher Plants</option>
+            <option value="0110314">14. Respiration in Plants</option>
+            <option value="0110315">15. Plant - Growth and Development</option>
+            <option value="0110316">16. Digestion and Absorption</option>
+            <option value="0110317">17. Breating and Exchange of Gases</option>
+            <option value="0110318">18. Body Fluids and Circulation</option>
+            <option value="0110319">19. Excretory Products and Their Elimination</option>
+            <option value="0110320">20. Locomotion and Movement</option>
+            <option value="0110321">21. Neural Control and Coordination</option>
+            <option value="0110322">22. Chemical Coordination and Integration</option>
+
+            <option value="0120301">1. Reproduction in Organisms</option>
+            <option value="0120302">2. Sexual Reproduction in Flowering Plants</option>
+            <option value="0120303">3. Human Reproduction</option>
+            <option value="0120304">4. Reproductive Health</option>
+            <option value="0120305">5. Principles of Inheritance and Variation</option>
+            <option value="0120306">6. Molecular Basis of Inheritance</option>
+            <option value="0120307">7. Evolution</option>
+            <option value="0120308">8. Human Health and Diseases</option>
+            <option value="0120309">9. Strategies for Enhancement in Food Production</option>
+            <option value="0120310">10. Microbes in Human Welfare</option>
+            <option value="0120311">11. Biotechnology - Principles and Processes</option>
+            <option value="0120312">12. Biotechnology and its Application</option>
+            <option value="0120313">13. Organisms and Populations</option>
+            <option value="0120314">14. Ecosystem</option>
+            <option value="0120315">15. Biodiversity and its Conservation</option>
+            <option value="0120316">16. Environmental Issues</option>
+        </select>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">English</div>
+            <div class="col">Bengali</div>
+        </div>
+        <div class="row">
+            <div class="col" id="engContainer"></div>
+            <div class="col" id="benContainer"></div>
+        </div>
+    </div> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ["\\(", "\\)"]],
+                displayMath: [['$$', '$$'], ["\\[", "\\]"]],
+                processEscapes: true
+            },
+            TeX: {
+                extensions: ["mhchem.js"],
+                unicode: {
+                    fonts: "STIXGeneral, 'Arial Unicode MS'"
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
