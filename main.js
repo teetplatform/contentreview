@@ -7,7 +7,7 @@ getJSON = (fileName) => {
     // document.querySelector('head').appendChild(script);
 
     
-    const url = window.location.href.split(window.location.pathname)[0] + '/' + folderName + '/' + fileName + '.json';
+    const url = window.location.href.split(window.location.pathname)[0] + '/contentreview/' + folderName + '/' + fileName + '.json';
     fetch(url).then(res => {
          if (res && res.status >= 200 && res.status < 400) {
               return res.json();
